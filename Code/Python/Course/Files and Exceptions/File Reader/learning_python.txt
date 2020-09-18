@@ -1,0 +1,8 @@
+In Python you can make dictionaries
+In Python you can loop through data types
+In Python you can do basic calculations
+In Python you can manipulate data
+In Python you can make GUI's
+In Python you can make classes
+In Python you can make functions
+In Python you can ask user for input
