@@ -31,7 +31,8 @@ passwordfield = tk.Entry(frame, textvariable=passwordvar)
 passwordfield.place(x=160, y= 130)
 
 #Database File
-db = TinyDB("Python/Projects/Login/loginDB.json")
+db = TinyDB(
+    "E:\\Code\\Code\\Python\\Projects\\Login\\loginDB.json")
 
 
 #Register and Login commands
