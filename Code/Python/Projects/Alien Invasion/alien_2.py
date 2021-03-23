@@ -8,7 +8,7 @@ class Alien_2(Sprite):
         pygame.init()        
         self.screen, self.screen_rect = aigame.screen, aigame.screen_rect
         # Self
-        self.image = pygame.image.load('E:\\Code\\Code\\Python\\Projects\\Alien Invasion\\images\\Paranoid_1.png')
+        self.image = pygame.image.load('E:\Programming\Code\Code\Python\Projects\Alien Invasion\\images\\Paranoid_1.png')
         self.rect = self.image.get_rect()
         # Places alien at top centre of screen
         self.rect.bottom = aigame.screen_rect.top

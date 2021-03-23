@@ -17,7 +17,7 @@ class Ship:
 
         # Sets Ship image and creates hitbox
         
-        self.image = pygame.image.load('E:\\Code\\Code\\Python\\Projects\\Alien Invasion\\images\\player_idle1.png')
+        self.image = pygame.image.load('E:\Programming\Code\Code\Python\Projects\Alien Invasion\\images\\player_idle1.png')
         self.image = pygame.transform.scale(self.image, self.settings.ship_scale)
         self.rect = self.image.get_rect()
 

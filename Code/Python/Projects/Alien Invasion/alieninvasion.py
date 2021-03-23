@@ -10,7 +10,7 @@ from explosion import Explosion
 from settings import Settings
 
 def start_menu_off(aigame):
-        aigame.background = pygame.image.load('E:\\Code\\Code\\Python\\Projects\\Alien Invasion\\images\\stars.jpg')
+        aigame.background = pygame.image.load('E:\Programming\Code\Code\Python\Projects\Alien Invasion\\images\\stars.jpg')
         aigame.background_rect = aigame.background.get_rect()
         
 class AlienInvasion:
@@ -35,7 +35,7 @@ class AlienInvasion:
         self.aliens_2 = pygame.sprite.Group()
         self.explosions = pygame.sprite.Group()
         # Background.
-        self.background = pygame.image.load('E:\\Code\\Code\\Python\\Projects\\Alien Invasion\\images\\start_screen.jpg')
+        self.background = pygame.image.load('E:\Programming\Code\Code\Python\Projects\Alien Invasion\\images\\start_screen.jpg')
         self.background_rect = self.background.get_rect()
         self.background_rect.center = self.screen_rect.center
         # Other Attributes.
@@ -74,21 +74,21 @@ class AlienInvasion:
             self.timer = 0
         if self.animation_timer == 200:
             if self.current_image == 1:
-                self.ship.image = pygame.image.load('E:\\Code\\Code\\Python\\Projects\\Alien Invasion\\images\\player_idle2.png')
+                self.ship.image = pygame.image.load('E:\Programming\Code\Code\Python\Projects\Alien Invasion\\images\\player_idle2.png')
                 if self.settings.logs == 2:
                     print(f"Set Alien and ship images to 2.")
                 for a in self.aliens:
-                    a.image = pygame.image.load('E:\\Code\\Code\\Python\\Projects\\Alien Invasion\\images\\Alien1_2.png')
+                    a.image = pygame.image.load('E:\Programming\Code\Code\Python\Projects\Alien Invasion\\images\\Alien1_2.png')
                 self.current_image = 2
                 self.animation_timer = 0                                
                 #if self.settings.logs == 1:
                 #    print("Changed Ship and Alien images to 2")
             else:
-                self.ship.image = pygame.image.load('E:\\Code\\Code\\Python\\Projects\\Alien Invasion\\images\\player_idle1.png')
+                self.ship.image = pygame.image.load('E:\Programming\Code\Code\Python\Projects\Alien Invasion\\images\\player_idle1.png')
                 if self.settings.logs == 2:
                     print(f"Set Alien and ship images to 1.")
                 for a in self.aliens:
-                    a.image = pygame.image.load('E:\\Code\\Code\\Python\\Projects\\Alien Invasion\\images\\Alien1_1.png')
+                    a.image = pygame.image.load('E:\Programming\Code\Code\Python\Projects\Alien Invasion\\images\\Alien1_1.png')
                 self.current_image = 1
                 self.animation_timer = 0
                 #if self.settings.logs == 1:
@@ -102,17 +102,17 @@ class AlienInvasion:
                 if e.current_image == 1:
                     if self.settings.logs > 2:
                         print(f"Set {e} image to 2.")
-                    e.image = pygame.image.load('E:\\Code\\Code\\Python\\Projects\\Alien Invasion\\images\\boom2.PNG')
+                    e.image = pygame.image.load('E:\Programming\Code\Code\Python\Projects\Alien Invasion\\images\\boom2.PNG')
                     if e.first_pass == True:
                         e.current_image = 2
                 elif e.current_image == 2:
-                    e.image = pygame.image.load('E:\\Code\\Code\\Python\\Projects\\Alien Invasion\\images\\boom3.PNG')
+                    e.image = pygame.image.load('E:\Programming\Code\Code\Python\Projects\Alien Invasion\\images\\boom3.PNG')
                     if self.settings.logs > 2:
                         print(f"Set {e} image to 3.")
                     if e.first_pass == True:
                         e.current_image = 3
                 else:
-                    e.image = pygame.image.load('E:\\Code\\Code\\Python\\Projects\\Alien Invasion\\images\\boom1.PNG')
+                    e.image = pygame.image.load('E:\Programming\Code\Code\Python\Projects\Alien Invasion\\images\\boom1.PNG')
                     if self.settings.logs > 2:
                         print(f"Set {e} image to 1.")
                         e.current_image = 1
@@ -235,7 +235,7 @@ class AlienInvasion:
         """Changes game behaviour for a levelup."""
         if level == 1: # Current level
             """Spawn alien2."""
-            new_alien_2 = Alien_2()
+            new_alien_2 = Alien_2(self)
             if len(self.aliens) < self.settings.max_aliens and self.game_start_timer > 1000:
                 self.aliens_2.add(new_alien_2)
 
@@ -246,7 +246,7 @@ class AlienInvasion:
         self.screen.blit(self.background, self.background_rect)
         # Draws images to screen
         if self.game_on == 1:
-            self._check_for_level_up()
+            #self._check_for_level_up()
             self.ship.blitme()
             self.ship.update(self)
             self._update_bullets()

@@ -13,7 +13,7 @@ class Alien(Sprite):
         # Screen
         self.screen, self.screen_rect = aigame.screen, aigame.screen_rect
         # Alien
-        self.image = pygame.image.load('E:\\Code\\Code\\Python\\Projects\\Alien Invasion\\images\\Alien1_1.png')
+        self.image = pygame.image.load('E:\Programming\Code\Code\Python\Projects\Alien Invasion\\images\\Alien1_1.png')
         self.image = pygame.transform.scale(self.image, self.settings.alien_scale)
         self.rect = self.image.get_rect()
         # Places alien on top of screen

@@ -6,7 +6,7 @@ class Explosion(Sprite):
     def __init__(self, aigame, bullet, alien):
         super().__init__()
         self.screen = aigame.screen
-        self.image = pygame.image.load('E:\\Code\\Code\\Python\\Projects\\Alien Invasion\\images\\boom1.PNG')
+        self.image = pygame.image.load('E:\Programming\Code\Code\Python\Projects\Alien Invasion\\images\\boom1.PNG')
         self.rect = self.image.get_rect()
         # Set location to bullet.
         self.rect.y = alien.rect.centery

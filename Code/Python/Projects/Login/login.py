@@ -32,7 +32,7 @@ passwordfield.place(x=160, y= 130)
 
 #Database File
 db = TinyDB(
-    "E:\\Code\\Code\\Python\\Projects\\Login\\loginDB.json")
+    "E:\\Programming\\Code\\Code\\Python\\Projects\\Login\\loginDB.json")
 
 
 #Register and Login commands
